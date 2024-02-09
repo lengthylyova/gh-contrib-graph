@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat';
+    color: var(--gh-text-default-color);
+    background-color: var(--gh-bg-color);
+}
+
+.main {
+    display: inline-flex;
+    align-items: center;
+    width: 1200px;
+    height: 60vh;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main a {
+    text-decoration: none;
+    color: var(--gh-text-inactive-color)
+}
+
+.main a:hover {
+    color: var(--gh-link-hover-color);
+}

@@ -1,0 +1,177 @@
+:root {
+    --gh-bg-color: #0d1117;
+    --gh-base-size-4: 0.25rem;
+    --gh-base-size-8: 0.5rem;
+    --gh-base-size-12: 0.75rem;
+    --gh-base-size-16: 1rem;
+    --gh-base-size-32: 2rem;
+    --gh-cell-level0-color: #21262d;
+    --gh-cell-level1-color: #0e4429;
+    --gh-cell-level2-color: #006d32;
+    --gh-cell-level3-color: #26a641;
+    --gh-cell-level4-color: #39d353;
+    --gh-cell-info-bg-color: #6e7681;
+    --gh-cell-outline-color: #ffffff0d;
+    --gh-cell-border-color: rgba(255, 255, 255, 0.03);
+    --gh-border-card-color: #30363d;
+    --gh-border-card-width: max(1px, 0.0625rem);
+    --gh-text-default-color: #e6edf3;
+    --gh-text-inactive-color: #848D97;
+    --gh-link-hover-color: #2f81f7;
+    --gh-font-default-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* Main block */
+#gh {
+    color: var(--gh-text-default-color);
+    width: fit-content;
+}
+#gh a {
+    text-decoration: none;
+    color: var(--gh-text-inactive-color)
+}
+#gh a:hover {
+    color: var(--gh-link-hover-color);
+}
+
+/* Table */
+.ghCalendarTable {
+    border-spacing: 3px;
+    border-collapse: separate;  
+}
+.ghCalendarTable tr {
+    height: 10px;
+}
+.ghCalendarTable td {
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* DayCell */
+.ghCalendarDayCell {
+    width: 10px;
+    border-radius: 2px;
+    border: 1px solid var(--gh-cell-border-color);
+    outline: 1px solid var(--gh-cell-outline-color);
+    outline-offset: -2px;
+}
+.ghCalendarDayCell[data-level="NONE"] {
+    background-color: var(--gh-cell-level0-color);
+    border: none;
+    outline: none;
+}
+.ghCalendarDayCell[data-level="FIRST_QUARTILE"] {
+    background-color: var(--gh-cell-level1-color);
+}
+.ghCalendarDayCell[data-level="SECOND_QUARTILE"] {
+    background-color: var(--gh-cell-level2-color);
+}
+.ghCalendarDayCell[data-level="THIRD_QUARTILE"] {
+    background-color: var(--gh-cell-level3-color);
+}
+.ghCalendarDayCell[data-level="FOURTH_QUARTILE"] {
+    background-color: var(--gh-cell-level4-color);
+}
+.ghCalendarDayCell span {
+    visibility: hidden;
+    position: absolute;
+    transform: translate(-50%, -130%);
+    word-wrap: normal;
+    text-wrap: nowrap;
+    pointer-events: none;
+    background-color: var(--gh-cell-info-bg-color);
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    font-family: var(--gh-font-default-family);
+}
+.ghCalendarDayCell span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--gh-cell-info-bg-color) transparent transparent transparent;
+}
+.ghCalendarDayCell:hover span {
+    visibility: visible;
+}
+.ghCalendarLabel {
+    font-size: 12px;
+    position: absolute;
+    bottom: -3px;
+    font-weight: 400;
+    font-family: var(--gh-font-default-family);
+}
+
+/* Containers */
+.ghCalendarCard {
+    background-color: var(--gh-bg-color);
+    padding: var(--gh-base-size-16);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: var(--gh-border-card-width, 1px) solid var(--gh-border-card-color);
+}
+.ghCalendarCanvas {
+    display: flex !important;
+    flex-direction: column;
+    padding-top: var(--gh-base-size-8, 4px) !important;
+    text-align: center !important;
+    margin-right: var(--gh-base-size-8, 8px) !important;
+    margin-left: var(--gh-base-size-8, 8px) !important;
+    overflow: visible;
+}
+
+/* Header */
+.ghCalendarHeader {
+    margin-bottom: var(--gh-base-size-4);
+    height: 20px;
+}
+.ghCalendarHeader span {
+    float: left;
+}
+.ghCalendarHeader div {
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+.ghCalendarHeader div img {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-left: var(--gh-base-size-4);
+}
+
+/* Footer */
+.ghCalendarCardFooter {
+    display: block;
+    padding-top: var(--gh-base-size-4, 4px) !important;
+    padding-bottom: var(--gh-base-size-4, 4px) !important;
+    padding-right: var(--gh-base-size-32, 32px) !important;
+    padding-left: var(--gh-base-size-32, 32px) !important;
+    text-align: center !important;
+    font-size: var(--gh-base-size-12);
+    font-family: var(--gh-font-default-family);
+    color: var(--gh-text-inactive-color);
+}
+.ghCalendarCardFooterLink {
+    display: block;
+    float: left;
+}
+.ghCalendarCardFooterColors {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    align-items: center;
+}
+.ghCalendarCardFooterColors * {
+    margin-right: var(--gh-base-size-4);
+}
+.ghCalendarCardFooterColors div {
+    width: 10px;
+    height: 10px;
+}
