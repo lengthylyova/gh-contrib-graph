@@ -25,6 +25,7 @@
 #gh {
     color: var(--gh-text-default-color);
     width: fit-content;
+    font-family: var(--gh-font-default-family);
 }
 #gh a {
     text-decoration: none;
@@ -36,6 +37,7 @@
 
 /* Table */
 .ghCalendarTable {
+    color: var(--gh-text-default-color);
     border-spacing: 3px;
     border-collapse: separate;  
 }
@@ -149,10 +151,7 @@
 /* Footer */
 .ghCalendarCardFooter {
     display: block;
-    padding-top: var(--gh-base-size-4, 4px) !important;
-    padding-bottom: var(--gh-base-size-4, 4px) !important;
-    padding-right: var(--gh-base-size-32, 32px) !important;
-    padding-left: var(--gh-base-size-32, 32px) !important;
+    padding: var(--gh-base-size-4, 4px) var(--gh-base-size-32, 32px) !important;
     text-align: center !important;
     font-size: var(--gh-base-size-12);
     font-family: var(--gh-font-default-family);
