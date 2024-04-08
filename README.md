@@ -1,10 +1,13 @@
-# GitHub Contribution Graph
+<img src="assets/media/thumbnail.png">
+
+---
+
 ![HTML5](https://img.shields.io/static/v1?label=&message=HTML5&color=%23E34F26&logo=html5&logoColor=%23fff)
 ![CSS](https://img.shields.io/static/v1?label=&message=CSS&color=%231572B6&logo=css3&logoColor=%23fff)
 ![ javascript](https://img.shields.io/static/v1?label=&message=+JavaScript&color=%23F7DF1E&logo=javascript&logoColor=%23000)
 [![Hosted by - lengthylyova](https://img.shields.io/static/v1?label=Hosted+by&message=lengthylyova&color=%231D9FD7&logo=pythonanywhere&logoColor=%23fff)](https://lengthylyova.pythonanywhere.com/)
 
-<img src="https://i.stack.imgur.com/41043.png">
+<img src="https://i.imgur.com/L1ipZQR.png">
 
 ## Usage
 
