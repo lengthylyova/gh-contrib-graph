@@ -112,6 +112,7 @@ function init_thumbnail() {
     thumbnailImage.src = "http://lengthylyova.pythonanywhere.com/static/gh-contrib-graph/thumbnail.png";
     thumbnailImage.style.width = "150px";
     thumbnailImage.style.marginTop = "10px";
+    thumbnailImage.alt = "GitHub Contribution Graph";
     thumbNailLink.appendChild(thumbnailImage);
     thumbnail.appendChild(thumbNailLink);
     return thumbnail
