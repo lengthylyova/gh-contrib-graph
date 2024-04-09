@@ -25,7 +25,7 @@ function init_table() {
 };
 
 function addMonths(thead, months) {
-    for (let i = 0; i < months.length; i++) {
+    for (let i = 0; i < months.length - 1; i++) {
         const total_weeks = months[i]["totalWeeks"];
         if (total_weeks => 2) {
             let cell = thead.rows[0].insertCell();
